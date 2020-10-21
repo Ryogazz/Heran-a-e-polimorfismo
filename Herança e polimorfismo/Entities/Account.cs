@@ -1,0 +1,34 @@
+﻿
+
+namespace Herança_e_polimorfismo.Entities
+{
+    class Account
+    {
+        public int Number { get; private set; }
+        public string Holder { get; private set; }
+        //protected e como private mas permite que outra sub classe modifique o dado
+        public double Balance { get; protected set; }
+
+
+        public Account()
+        {
+        }
+
+        public Account(int number, string holder, double balance)
+        {
+            Number = number;
+            Holder = holder;
+            Balance = balance;
+        }
+
+        public void Withdraw(double amount)
+        {
+            Balance -= amount;
+        }
+
+        public void Deposit(double amount)
+        {
+            Balance += amount;
+        }
+    }
+}
