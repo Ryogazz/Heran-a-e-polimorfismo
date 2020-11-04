@@ -20,10 +20,11 @@ namespace Herança_e_polimorfismo.Entities
             Holder = holder;
             Balance = balance;
         }
-
-        public void Withdraw(double amount)
+        // conta normal paga um valor de 5 reais por saque
+        //vitual incluido para que metodo seja sobrescrito
+        public virtual void Withdraw(double amount)
         {
-            Balance -= amount;
+            Balance -= amount + 5.0;
         }
 
         public void Deposit(double amount)

@@ -30,6 +30,18 @@ namespace Herança_e_polimorfismo
             {
                 BusinessAccount acc5 = (BusinessAccount)acc3;
             }
+
+            Console.WriteLine("________________________________");
+            Console.WriteLine("Sobreposição ou sobrecrita");
+
+            Account acc6 = new Account(1001, "alex", 500.0);
+            Account acc7 = new SavingsAccount(1002, "Anna", 500.00, 0.01);
+
+            acc6.Withdraw(10.0);
+            acc7.Withdraw(10.0);
+
+            Console.WriteLine(acc6.Balance);
+            Console.WriteLine(acc7.Balance);
         }
     }
 }
