@@ -2,6 +2,10 @@
 
 namespace Herança_e_polimorfismo.Entities
 {
+    /*aqui podemos usar SEALED para que a classe nao possa ser herdada ex:
+     * sealed class SavingsAccount : Account
+    */
+
     class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
@@ -35,6 +39,15 @@ namespace Herança_e_polimorfismo.Entities
             base.Withdraw(amount);
             Balance -= 2.0;
         }
+
+        /*
+         Aqui podemos usar SEALED para que o metodo nao possa ser sobrescrito novamente ex:
+        public sealed override void Withdraw(double amount)
+        {
+            base.Withdraw(amount);
+            Balance -= 2.0;
+        }
+         */
 
     }
 }
